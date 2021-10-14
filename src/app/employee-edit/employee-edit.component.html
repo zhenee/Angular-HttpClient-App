@@ -1,7 +1,7 @@
 <div class="container custom-container">
     <div class="col-md-12">
       
-      <h3 class="mb-3 text-center">Update Employee</h3>
+      <h3 class="mb-3 text-center">Update Employee <button style="margin-left: 20px;" class="btn btn-outline-primary" routerLink="/employee-list">Employee List</button></h3>
   
       <div class="form-group">
         <input type="text" [(ngModel)]="employeeData.name" class="form-control" placeholder="Name">
@@ -16,7 +16,7 @@
       </div>
   
       <div class="form-group">
-        <button class="btn btn-success btn-lg btn-block" (click)="updateEmployee()">Update Employee</button>
+        <button class="btn btn-success btn-lg btn-block" style="margin-top: 10px;" (click)="updateEmployee()">Update Employee</button>
       </div>
       
     </div>
