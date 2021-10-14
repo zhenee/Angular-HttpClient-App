@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Tony",
+      "email": "tony@gmail.com",
+      "phone": "001-123-4562"
+    },
+    {
+      "id": 2,
+      "name": "James",
+      "email": "james@gmail.com",
+      "phone": "001-123-4568"
+    },
+    {
+      "name": "Test",
+      "email": "test@gmail.com",
+      "phone": 100,
+      "id": 3
+    },
+    {
+      "name": "Zen",
+      "email": "zen@domain.org.my",
+      "phone": "1111",
+      "id": 4
+    }
+  ]
+}

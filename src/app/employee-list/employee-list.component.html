@@ -1,0 +1,40 @@
+<div class="container custom-container-2">
+
+    <!-- Show it when there is no employee -->
+    <div class="no-data text-center" *ngIf="Employee.length == 0">
+      <p>No data found</p>
+    </div>
+  
+    <!-- Employee list table, it hides when there is no employee -->
+    <div *ngIf="Employee.length !== 0">
+      <h3 class="mb-3 text-center">Employee List <button style="margin-left: 20px;" class="btn btn-outline-primary" routerLink="/create-employee">Add Employee</button></h3>
+  
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">User ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employee of Employee">
+              <td>{{employee.id}}</td>
+              <td>{{employee.name}}</td>
+              <td>{{employee.email}}</td>
+              <td>{{employee.phone}}</td>
+              <td>
+                <button type="button" class="btn btn-secondary edit" routerLink="/employee-edit/{{employee.id}}">Edit</button>
+                <button type="button" style="margin-left: 5px;" class="btn btn-danger delete" (click)="deleteEmployee(employee.id)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  
+  </div>
