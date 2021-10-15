@@ -1,28 +1,22 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "Wong",
-      "email": "wong@gmail.com",
-      "phone": "001-123-4562"
-    },
-    {
-      "id": 2,
-      "name": "ZZZ",
-      "email": "zzz@gmail.com",
-      "phone": "001-123-4568"
-    },
-    {
-      "name": "Test",
-      "email": "test@gmail.com",
-      "phone": "001-846-7846",
-      "id": 3
-    },
-    {
+      "id": "da7b2748-029b-2b5e-434d-92d55494c5ce",
       "name": "Zen",
-      "email": "zen@domain.org.my",
-      "phone": "001-999-8888",
-      "id": 4
+      "email": "zen@gmail.com",
+      "phone": "0123456789"
+    },
+    {
+      "id": "3ca13408-f290-9cbc-b544-fd07bd001690",
+      "name": "Jack",
+      "email": "jack@gmail.com",
+      "phone": "0369852148"
+    },
+    {
+      "id": "b2a78798-3540-43e0-7eee-967d46413f81",
+      "name": "James",
+      "email": "james@gmail.com",
+      "phone": "9632587412"
     }
   ]
 }

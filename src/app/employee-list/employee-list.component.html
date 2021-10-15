@@ -2,7 +2,7 @@
 
     <!-- Show it when there is no employee -->
     <div class="no-data text-center" *ngIf="Employee.length == 0">
-      <p>No data found</p>
+      <p>No data found<button style="margin-left: 20px;" class="btn btn-outline-primary" routerLink="/create-employee">Add Employee</button></p>
     </div>
   
     <!-- Employee list table, it hides when there is no employee -->
@@ -13,20 +13,22 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">User ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Action</th>
+              <th scope="col" style="text-align: center;">#</th>
+              <th scope="col" style="text-align: center;">Name</th>
+              <th scope="col" style="text-align: center;">Email</th>
+              <th scope="col" style="text-align: center;">Phone</th>
+              <th scope="col" style="text-align: center;">Unique ID</th>
+              <th scope="col" style="text-align: center;">Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let employee of Employee">
-              <td>{{employee.id}}</td>
-              <td>{{employee.name}}</td>
-              <td>{{employee.email}}</td>
-              <td>{{employee.phone}}</td>
-              <td>
+            <tr *ngFor="let employee of Employee ;let i = index">
+              <td style="text-align: center;">{{i + 1}}</td>
+              <td style="text-align: center;">{{employee.name}}</td>
+              <td style="text-align: center;">{{employee.email}}</td>
+              <td style="text-align: center;">{{employee.phone}}</td>
+              <td style="text-align: center;">{{employee.id}}</td>
+              <td style="text-align: center;">
                 <button type="button" class="btn btn-secondary edit" routerLink="/employee-edit/{{employee.id}}">Edit</button>
                 <button type="button" style="margin-left: 5px;" class="btn btn-danger delete" (click)="deleteEmployee(employee.id)">Delete</button>
               </td>

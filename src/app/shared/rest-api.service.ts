@@ -24,10 +24,9 @@ export class RestApiService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }  
+  }
 
   // HttpClient API get() method => Fetch employees list
-
   getEmployees(): Observable<Employee> {
     return this.http.get<Employee>(this.apiURL + '/employees')
     .pipe(
@@ -43,7 +42,7 @@ export class RestApiService {
       retry(1),
       catchError(this.handleError)
     )
-  }  
+  }
 
   // HttpClient API post() method => Create employee
   createEmployee(employee: any): Observable<Employee> {
@@ -52,7 +51,7 @@ export class RestApiService {
       retry(1),
       catchError(this.handleError)
     )
-  }  
+  }
 
   // HttpClient API put() method => Update employee
   updateEmployee(id: any, employee: any): Observable<Employee> {

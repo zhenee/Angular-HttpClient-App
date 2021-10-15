@@ -1,1 +1,10 @@
 <router-outlet></router-outlet>
+
+<div class="container text-center mt-5">
+    <p>Window width: <strong>{{ getScreenWidth }}</strong></p>
+    <p>Window height: <strong>{{ getScreenHeight }}</strong></p>
+</div>
+
+<p class="mb-3 text-center">Hello, you have pressed keys {{counter}} number of times.
+    <button style="margin-left: 20px;" class="btn btn-info btn-block" (click)="resetCounter()">Reset Counter</button>
+</p>
